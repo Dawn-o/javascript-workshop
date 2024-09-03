@@ -3,22 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Age Calculator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      body {
+        font-family: "Poppins", serif;
+      }
+      input::-webkit-calendar-picker-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        background-position: calc(100% - 10px);
+        background-size: 30px;
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="calculator">
-        <h1>
-          Javascript<br />
-          <span>Age Calculator</span>
-        </h1>
-        <div class="input-box">
-            <input type="date" id="date">
-            <button onclick="calculateAge()">Calculate</button>
-        </div>
-        <p id="result"></p>
+  <body
+    class="bg-gradient-to-br from-[#4203a9] to-[#90bafc] w-full text-white min-h-screen p-2.5"
+  >
+    <div class="w-full max-w-xl ml-[10%] mt-[10%]">
+      <h1 class="text-6xl font-bold">
+        Javascript<br />
+        <span class="text-yellow-300">Age Calculator</span>
+      </h1>
+      <div
+        class="my-10 mx-0 p-9 rounded-lg bg-white bg-opacity-30 flex items-center"
+      >
+        <input
+          type="date"
+          id="date"
+          class="flex-1 mr-5 py-4 px-5 text-lg rounded-md border-0 outline-0 text-gray-900 relative"
+        />
+        <button
+          onclick="calculateAge()"
+          class="bg-yellow-300 text-white border-0 outline-0 font-medium py-4 px-8 rounded-md"
+        >
+          Calculate
+        </button>
       </div>
+      <p id="result" class="text-xl"></p>
     </div>
 
     <script src="script.js"></script>

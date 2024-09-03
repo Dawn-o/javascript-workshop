@@ -34,8 +34,9 @@ function calculateAge() {
         m3 = 11;
         y3--;
     }
-    result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months and <span>${d3}</span> days old`;
+    result.innerHTML = `You are <span class="text-yellow-300">${y3}</span> years, <span class="text-yellow-300">${m3}</span> months and <span class="text-yellow-300">${d3}</span> days old`;
 }
+
 function getDayInMonth(year, month) {
     return new Date(year, month, 0).getDate();
 }
