@@ -13,3 +13,10 @@ function generateQR() {
         }, 1000);
     }
 }
+
+document.getElementById("qrText").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        generateQR();
+    }
+});
