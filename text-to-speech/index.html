@@ -4,15 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text To Speech</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      body {
+        font-family: "Poppins", serif;
+      }
+    </style>
   </head>
   <body>
-    <div class="hero">
-      <h1>Text To Speech <span>Converter</span></h1>
-      <textarea placeholder="Write anything here..."></textarea>
-      <div class="row">
-        <select></select>
-        <button><img src="images/play.png" /> Listen</button>
+    <div
+      class="w-full h-screen bg-gradient-to-tr from-[#010758] to-[#490d61] flex items-center justify-center flex-col text-white"
+    >
+      <h1 class="text-5xl font-medium -mt-12 mb-12">
+        Text To Speech
+        <span class="text-[ff2963]"> Converter </span>
+      </h1>
+      <textarea
+        class="w-[600px] h-64 bg-[#403d84] text-white text-base border-0 outline-0 p-5 rounded-xl resize-none mb-8 placeholder:text-base placeholder:text-white"
+        placeholder="Write anything here..."
+      ></textarea>
+      <div class="w-[600px] flex items-center gap-5">
+        <select
+          class="flex-1 text-white bg-[#403d84] h-12 px-5 outline-none border-0 rounded-full appearance-none bg-[url('/images/dropdown.png')] bg-no-repeat bg-[length:15px] bg-[position:calc(100%-20px)_20px]"
+        ></select>
+        <button
+          class="bg-[#ff2963] text-white text-base py-3 px-8 rounded-[35px] border-0 outline-0 cursor-pointer flex items-center"
+        >
+          <img class="w-4 mr-2" src="images/play.png" /> Listen
+        </button>
       </div>
     </div>
     <script src="script.js"></script>
