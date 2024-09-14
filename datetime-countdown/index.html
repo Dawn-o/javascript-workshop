@@ -4,35 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datetime Countdown</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      body {
+        font-family: "Poppins", serif;
+      }
+      .rocket {
+        width: 250px;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        animation: rocket 4s linear infinite;
+      }
+
+      @keyframes rocket {
+        0% {
+          bottom: 0;
+          opacity: 0;
+        }
+        100% {
+          bottom: 105%;
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <img src="images/logo.png" class="logo" />
+    <div
+      class="w-screen h-screen bg-[url('/images/background.png')] bg-center bg-cover py-0 px-[8%]"
+    >
+      <img src="images/logo.png" class="w-32 p-5 cursor-pointer" />
 
-      <div class="content">
+      <div class="top-1/2 absolute -translate-y-1/2 text-white">
         <p>Website Is Under Maintenance</p>
-        <h1>We're <span>Launching</span> Soon</h1>
-        <div class="launch-time">
-          <div>
-            <p id="days">00</p>
+        <h1 class="text-6xl font-bold mt-6 mb-8">
+          We're <span class="text-[#ff3753]">Launching</span> Soon
+        </h1>
+        <div class="flex space-x-3">
+          <div class="basis-24">
+            <p class="text-6xl -mt-4" id="days">00</p>
             <span>Days</span>
           </div>
-          <div>
-            <p id="hours">00</p>
+          <div class="basis-24">
+            <p class="text-6xl -mt-4" id="hours">00</p>
             <span>Hours</span>
           </div>
-          <div>
-            <p id="minutes">00</p>
+          <div class="basis-24">
+            <p class="text-6xl -mt-4" id="minutes">00</p>
             <span>Minutes</span>
           </div>
-          <div>
-            <p id="seconds">00</p>
+          <div class="basis-24">
+            <p class="text-6xl -mt-4" id="seconds">00</p>
             <span>Seconds</span>
           </div>
         </div>
-        <button type="button">
-          Learn More <img src="images/triangle.png" />
+        <button
+          class="bg-transparent border-2 border-white outline-none py-3 px-4 text-white flex items-center mt-8 cursor-pointer"
+          type="button"
+        >
+          Learn More <img class="w-4 ml-3" src="images/triangle.png" />
         </button>
       </div>
       <img src="images/rocket.png" class="rocket" />
