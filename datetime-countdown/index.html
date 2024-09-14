@@ -11,6 +11,9 @@
       body {
         font-family: "Poppins", serif;
       }
+      .bg-images{
+        background-image: url(images/background.png);
+      }
       .rocket {
         width: 250px;
         position: absolute;
@@ -18,7 +21,6 @@
         bottom: 0;
         animation: rocket 4s linear infinite;
       }
-
       @keyframes rocket {
         0% {
           bottom: 0;
@@ -33,7 +35,7 @@
   </head>
   <body>
     <div
-      class="w-screen h-screen bg-[url('/images/background.png')] bg-center bg-cover py-0 px-[8%]"
+      class="w-screen h-screen bg-image bg-center bg-cover py-0 px-[8%]"
     >
       <img src="images/logo.png" class="w-32 p-5 cursor-pointer" />
 
