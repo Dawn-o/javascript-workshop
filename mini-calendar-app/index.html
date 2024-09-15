@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Calendar</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      body {
+        font-family: "Poppins", serif;
+      }
+    </style>
   </head>
   <body>
-    <div class="hero">
-      <div class="calendar">
-        <div class="left">
-          <p id="date">-</p>
+    <div
+      class="w-full h-screen bg-gradient-to-tr from-[#1d0000] to-[#20205b] flex items-center justify-center"
+    >
+      <div class="w-96 h-64 bg-white flex items-center rounded-xl">
+        <div
+          class="w-[58%] h-full flex items-center justify-center flex-col text-2xl"
+        >
+          <p id="date" class="text-8xl leading-[90px]">-</p>
           <p id="day">-</p>
         </div>
-        <div class="right">
+        <div
+          class="w-[42%] h-full flex items-center justify-center flex-col text-2xl bg-[#f4351e] text-white rounded-r-xl"
+        >
           <p id="month">-</p>
           <p id="year">-</p>
         </div>
