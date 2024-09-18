@@ -20,6 +20,7 @@ const projects = [
     "image-transition",
     "mini-calendar-app",
     "drag-and-drop",
+    "digital-clock",
 ];
 
 const projectList = document.getElementById("project-list");
