@@ -19,6 +19,7 @@ const projects = [
     "weather-app",
     "image-transition",
     "mini-calendar-app",
+    "drag-and-drop",
 ];
 
 const projectList = document.getElementById("project-list");
