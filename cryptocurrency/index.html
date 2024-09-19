@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cryptocurrency</title>
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      body {
+        font-family: "Poppins", serif;
+        background-image: url(images/background.png);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -12,49 +22,59 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <nav>
+    <div class="w-full h-screen py-0 px-[7%] text-white">
+      <nav class="w-full py-5 px-0 flex items-center">
         <img src="images/logo.png" />
-        <ul>
-          <li><a href="#">Market</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">White Papers</a></li>
-          <li><a href="#">About us</a></li>
+        <ul class="flex-1">
+          <li class="inline-block my-3 mx-5"><a href="#">Market</a></li>
+          <li class="inline-block my-3 mx-5"><a href="#">Features</a></li>
+          <li class="inline-block my-3 mx-5"><a href="#">White Papers</a></li>
+          <li class="inline-block my-3 mx-5"><a href="#">About us</a></li>
         </ul>
-        <a href="#" class="btn">EN</a>
+        <a href="#" class="text-white border border-white py-3 px-8">EN</a>
       </nav>
 
-      <div class="content">
-        <h1>
+      <div class="mt-[12%]">
+        <h1 class="text-[88px] mb-4 font-bold">
           BUY & <br />
-          SELL <span>Crypto</span>
+          SELL <span class="text-[#ff960b]">Crypto</span>
         </h1>
-        <p>
+        <p class="leading-6">
           World's biggest cryptocurrency exchange available on web <br />
           as well as mobile phone.
         </p>
-        <a href="#" class="btn">EXPLORE MORE</a>
+        <a
+          href="#"
+          class="inline-block mt-8 bg-[#ff960b] text-white py-4 px-8 rounded-3xl"
+          >EXPLORE MORE</a
+        >
       </div>
 
-      <div class="coin-list">
-        <div class="coin">
-          <img src="images/bitcoin.png" />
+      <div class="absolute right-[10%] bottom-12 flex items-center">
+        <div
+          class="flex items-center text-sm my-0 mx-4 text-[#ff960b] border border-white py-5 px-8 rounded-lg"
+        >
+          <img src="images/bitcoin.png" class="w-10 mr-3" />
           <div>
-            <h3>$ <span id="bitcoin"></span></h3>
+            <h3 class="text-white mb-1">$ <span id="bitcoin"></span></h3>
             <p>Bitcoin</p>
           </div>
         </div>
-        <div class="coin">
-          <img src="images/ethereum.png" />
+        <div
+          class="flex items-center text-sm my-0 mx-4 text-[#ff960b] border border-white py-5 px-8 rounded-lg"
+        >
+          <img src="images/ethereum.png" class="w-10 mr-3"" />
           <div>
-            <h3>$ <span id="ethereum"></span></h3>
+            <h3 class="text-white mb-1">$ <span id="ethereum"></span></h3>
             <p>Ethereum</p>
           </div>
         </div>
-        <div class="coin">
-          <img src="images/dogecoin.png" />
+        <div
+          class="flex items-center text-sm my-0 mx-4 text-[#ff960b] border border-white py-5 px-8 rounded-lg"
+        >
+          <img src="images/dogecoin.png" class="w-10 mr-3"" />
           <div>
-            <h3>$ <span id="dogecoin"></span></h3>
+            <h3 class="text-white mb-1">$ <span id="dogecoin"></span></h3>
             <p>Dogecoin</p>
           </div>
         </div>

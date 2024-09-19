@@ -1,7 +1,3 @@
-const btc = document.getElementById("bitcoin");
-const eth = document.getElementById("ethereum");
-const doge = document.getElementById("dogecoin");
-
 var settings = {
     "async": true,
     "scrossDomain": true,
@@ -11,8 +7,8 @@ var settings = {
 }
 
 $.ajax(settings).done(function (response) {
-    btc.innerHTML = response.bitcoin.usd;
-    eth.innerHTML = response.ethereum.usd;
-    doge.innerHTML = response.dogecoin.usd;
+    document.getElementById("bitcoin").innerHTML = response.bitcoin.usd;
+    document.getElementById("ethereum").innerHTML = response.ethereum.usd;
+    document.getElementById("dogecoin").innerHTML = response.dogecoin.usd;
 })
 
