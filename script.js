@@ -21,6 +21,7 @@ const projects = [
     "mini-calendar-app",
     "drag-and-drop",
     "digital-clock",
+    "cryptocurrency",
 ];
 
 const projectList = document.getElementById("project-list");
