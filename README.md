@@ -23,3 +23,6 @@ Currently, none of the projects are fully responsive, so they might not display 
    git clone https://github.com/Dawn-o/javascript-workshop.git
    ```
 3. Browse the project folders and open any index.html file in your browser.
+
+## 🚧 Ongoing Journey
+This repository is a work in progress, and I’ll be adding more JavaScript mini-projects as I continue learning. Each project serves as a practice and stepping stone in mastering JavaScript. Check back regularly for updates!
