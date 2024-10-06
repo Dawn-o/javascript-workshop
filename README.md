@@ -31,3 +31,7 @@ You can view and interact with all the projects via the GitHub Pages link above.
 
 ## What’s Next? 🚧
 This workshop is an ongoing project. I plan to continuously update the repository with more mini projects and improvements, including adding responsiveness and exploring advanced JavaScript concepts. Keep an eye out for updates as I continue learning and building!
+
+---
+
+Thanks for visiting and happy coding! 😊
