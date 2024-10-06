@@ -7,7 +7,7 @@ These mini-projects are a testament to learning by doing, and you can explore th
 ### 🔗 Live Demo:
 👉 [**Explore the JavaScript Workshop**](https://dawn-o.github.io/javascript-workshop)
 
-## What You’ll Find 🛠️
+## What You’ll Find 🌟
 
 This repository features a range of small projects—like calculators and weather apps—that demonstrate core JavaScript concepts like DOM manipulation, API requests, event handling, and more. All of these projects are styled using **Tailwind CSS**, ensuring a consistent and streamlined look.
 
