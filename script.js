@@ -31,7 +31,13 @@ projects.forEach((project) => {
     listItem.href = project;
     listItem.target = "_blank";
     listItem.className =
-        "bg-transparent border-2 border-gray-900 outline-none py-3 px-4 text-gray-900 text-center flex items-center justify-center uppercase font-medium mt-8 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-900 hover:text-white";
-    listItem.textContent = project.replace(/-/g, " "); // Convert kebab-case to normal text
+        "project-link bg-transparent border-2 border-gray-900 outline-none py-4 px-5 text-gray-900 text-center flex items-center justify-center uppercase font-medium cursor-pointer transition-all duration-300 ease-in-out hover:bg-gray-900 hover:text-white transform hover:-translate-y-1 hover:shadow-lg";
+
+    const formattedText = project
+        .split("-")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
+    listItem.textContent = formattedText;
     projectList.appendChild(listItem);
 });
