@@ -1,33 +1,28 @@
-const progress = document.getElementById("progress");
-const song = document.getElementById("song");
-const ctrlIcon = document.getElementById("ctrlIcon");
+let song = document.getElementById("song");
+let progress = document.getElementById("progress");
+let ctrlIcon = document.getElementById("ctrlIcon");
 
-song.onloadedmetadata = function () {
-    progress.max = song.duration;
-    progress.value = song.currentTime;
-}
+window.onload = function () {
+    song.pause();
+    song.currentTime = 0;
+};
 
 function playPause() {
-    if (ctrlIcon.classList.contains("fa-pause")) {
+    if (song.paused) {
+        song.play();
+        ctrlIcon.classList.remove("fa-play");
+        ctrlIcon.classList.add("fa-pause");
+    } else {
         song.pause();
         ctrlIcon.classList.remove("fa-pause");
         ctrlIcon.classList.add("fa-play");
-    } else {
-        song.play();
-        ctrlIcon.classList.add("fa-pause");
-        ctrlIcon.classList.remove("fa-play");
     }
 }
 
-if (song.play()) {
-    setInterval(() => {
-        progress.value = song.currentTime;
-    }, 500);
-}
+song.addEventListener("timeupdate", function () {
+    progress.value = song.currentTime * 100 / song.duration;
+});
 
-progress.onchange = function () {
-    song.play();
-    song.currentTime = progress.value;
-    ctrlIcon.classList.add("fa-pause");
-    ctrlIcon.classList.remove("fa-play");
-}
+progress.addEventListener("change", function () {
+    song.currentTime = progress.value * song.duration / 100;
+});

@@ -3,37 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
     <script
       src="https://kit.fontawesome.com/d68b95aa96.js"
       crossorigin="anonymous"
     ></script>
     <title>Music Player</title>
   </head>
-  <body>
-    <div class="container">
-      <div class="music-player">
-        <nav>
-          <div class="circle">
-            <i class="fa-solid fa-angle-left"></i>
-          </div>
-          <div class="circle">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        <img src="media/thumbnail.jpg" class="song-img" />
-        <h1>Go!</h1>
-        <p>NEFFEX</p>
+  <body class="font-poppins antialiased">
+    <div
+      class="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 flex items-center justify-center flex-wrap p-4"
+    >
+      <div
+        class="bg-[#1a1a1a] w-[424px] p-[25px_35px_45px] text-center rounded-2xl shadow-2xl backdrop-blur-lg bg-opacity-90"
+      >
+        <div class="mb-10">
+          <h1 class="text-2xl font-semibold text-white mt-5">
+            HIT ME HARD AND SOFT
+          </h1>
+          <p class="text-sm text-[#b3b3b3] mt-2 tracking-wide">Billie Eilish</p>
+        </div>
 
-        <audio id="song">
-          <source src="media/Go! - NEFFEX.mp3" type="audio/mpeg" />
+        <div
+          class="relative group cursor-pointer transition-all duration-300 hover:scale-105"
+        >
+          <img
+            src="media/thumbnail.jpg"
+            class="w-[220px] h-[220px] mx-auto rounded-full border-8 border-[#333] shadow-[0_10px_60px_rgba(255,255,255,0.1)] object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <audio id="song" preload="metadata" autoplay="false">
+          <source src="media/BIRDS OF A FEATHER.mp3" type="audio/mpeg" />
         </audio>
-        <input type="range" value="0" id="progress" />
 
-        <div class="controls">
-          <div><i class="fa-solid fa-backward"></i></div>
-          <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
-          <div><i class="fa-solid fa-forward"></i></div>
+        <input
+          type="range"
+          value="0"
+          id="progress"
+          class="w-full h-[6px] bg-[#666] rounded-full cursor-pointer my-12 appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:w-[30px] [&::-webkit-slider-thumb]:h-[30px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-8 [&::-webkit-slider-thumb]:border-[#333] [&::-webkit-slider-thumb]:shadow-[0_5px_5px_rgba(0,0,0,0.3)] hover:[&::-webkit-slider-thumb]:scale-110 transition-all duration-200"
+        />
+
+        <div class="flex items-center justify-center gap-8">
+          <div
+            class="w-[60px] h-[60px] bg-[#333] inline-flex items-center justify-center rounded-full text-white shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#444] transition-all duration-200 cursor-pointer"
+          >
+            <i class="fa-solid fa-backward text-lg"></i>
+          </div>
+          <div
+            onclick="playPause()"
+            class="w-[70px] h-[70px] bg-white inline-flex items-center justify-center rounded-full text-black shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-200 cursor-pointer"
+          >
+            <i class="fa-solid fa-play text-xl" id="ctrlIcon"></i>
+          </div>
+          <div
+            class="w-[60px] h-[60px] bg-[#333] inline-flex items-center justify-center rounded-full text-white shadow-lg hover:shadow-xl hover:scale-105 hover:bg-[#444] transition-all duration-200 cursor-pointer"
+          >
+            <i class="fa-solid fa-forward text-lg"></i>
+          </div>
         </div>
       </div>
     </div>
