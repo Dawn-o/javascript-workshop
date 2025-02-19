@@ -28,7 +28,3 @@ You can view and interact with all the projects via the GitHub Pages link above.
    git clone https://github.com/Dawn-o/javascript-workshop.git
    ```
 2. Navigate to the project folders and open index.html in your browser.
-
-## What’s Next? 🚧
-This workshop is an ongoing project. I plan to continuously update the repository with more mini projects and improvements, including adding responsiveness and exploring advanced JavaScript concepts.
----
