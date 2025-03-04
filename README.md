@@ -17,14 +17,3 @@ This repository features a range of small projects—like calculators and weathe
 
 - **JavaScript**: The primary programming language behind the functionality of each project.
 - **Tailwind CSS**: A utility-first CSS framework used to quickly style the UI elements.
-
-## How to Use 🛠️
-
-You can view and interact with all the projects via the GitHub Pages link above. Alternatively, you can clone this repository and explore the projects locally:
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/Dawn-o/javascript-workshop.git
-   ```
-2. Navigate to the project folders and open index.html in your browser.
