@@ -5,7 +5,7 @@ Welcome to my **JavaScript Workshop**, a collection of small but powerful projec
 These mini-projects are a testament to learning by doing, and you can explore them directly through the live demo link below.
 
 ### 🔗 Live Demo:
-👉 [**Explore the JavaScript Workshop**](https://dawn-o.github.io/javascript-workshop)
+👉 [**JavaScript Workshop**](https://dawn-o.github.io/javascript-workshop)
 
 ## What You’ll Find 🌟
 
